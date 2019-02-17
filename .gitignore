@@ -2,4 +2,5 @@ vyper/
 env/
 env2/
 vyper.spec
+dist/
 
