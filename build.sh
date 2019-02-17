@@ -1,6 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-CC="/usr/bin/musl-gcc"
 python="/usr/bin/python3"
 REPO_DIR="./vyper"
 OUTPUT_DIR="./bin"
@@ -19,7 +18,7 @@ else
     cd ../
 fi
 
-tags=("v0.1.0-beta.7" "v0.1.0-beta.8")
+tags=("v0.1.0-beta.4" "v0.1.0-beta.5" "v0.1.0-beta.6" "v0.1.0-beta.7" "v0.1.0-beta.8")
 
 function make_virtualenv {
     virtualenv=$1
@@ -49,7 +48,7 @@ do
     source $VYPER_VIRTUAL_ENV/bin/activate
     cd $REPO_DIR
     git checkout tags/$tag
-    pip uninstall vyper
+    pip uninstall -y vyper
     pip install .
     cd ../
     pyinstaller -y --onefile $REPO_DIR/bin/vyper
