@@ -18,7 +18,7 @@ else
     cd ../
 fi
 
-tags=("v0.1.0-beta.4" "v0.1.0-beta.5" "v0.1.0-beta.6" "v0.1.0-beta.7" "v0.1.0-beta.8" "v0.1.0-beta.9")
+tags=("v0.1.0-beta.10")
 
 function make_virtualenv {
     virtualenv=$1
